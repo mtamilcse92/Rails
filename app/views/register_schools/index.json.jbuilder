@@ -1,0 +1,1 @@
+json.array! @register_schools, partial: 'register_schools/register_school', as: :register_school

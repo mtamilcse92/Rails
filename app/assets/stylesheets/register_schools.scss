@@ -1,0 +1,86 @@
+// Place all the styles related to the registerSchools controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.right-part {
+    width: 50%;
+    float: left;
+    margin-top: 6%;
+}
+
+.left-part {
+    width: 50%;
+    float: right;
+    margin-top: 6%;
+    .field{
+    	margin-top: 2em;
+    .text{
+    	margin-left: 1em;
+    	padding: 0.5em;
+    	border: 2px solid gray;
+    	border-radius: 30px;
+    }
+    }
+}
+
+.field {
+    .label-width {
+        width: 9em;
+    }
+    .form-control {
+        width: 55%;
+    }
+}
+
+.block-two {
+    margin-left: 9em;
+}
+
+.text-field {
+    width: 45%;
+    padding: 0.5em;
+}
+
+.text-field-others {
+    width: 55%;
+    padding: 0.5em;
+}
+
+.a-1 {
+    float: right;
+    width: 2.5em;
+    margin-top: 0 !important;
+    background-color: transparent !important;
+}
+
+.a-2{
+	float: right;
+    width: 4em;
+    background-color: transparent !important;
+}
+
+.data{
+	margin-bottom: 2em;
+	margin-left: 2%;
+}
+
+.a {
+    float: right;
+    width: 4em;
+    margin-top: 1em !important;
+    background-color: transparent !important;
+}
+
+.details{
+	width: 100%;
+}
+
+.content{
+	float: left;
+	margin-left: 5em;
+}
+
+
+.submit{
+	width: 4em;
+	margin-top: 10em;
+}

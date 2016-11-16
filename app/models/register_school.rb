@@ -1,0 +1,2 @@
+class RegisterSchool < ApplicationRecord
+end

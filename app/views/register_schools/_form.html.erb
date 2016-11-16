@@ -1,0 +1,52 @@
+<%= form_for(register_school) do |f| %>
+  <% if register_school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(register_school.errors.count, "error") %> prohibited this register_school from being saved:</h2>
+
+      <ul>
+      <% register_school.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="right-part">
+  <div class="field">
+    <%= f.label :name,"SCHOOL NAME:", class:"text-muted label-width" %>
+    <%= f.text_field :school_name, class:"text-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name,"ADDRESS:", class:"text-muted label-width" %>
+    <%= f.text_area :address, cols: "30", rows: "10" %>
+  </div>
+
+  <div class="field block-two">
+    <%= f.label :name,"CITY:", class:"text-muted" %><br>
+    <%= f.text_field :city, class:"text-field-others" %>
+  </div>
+
+  <div class="field block-two">
+    <%= f.label :name,"STATE:", class:"text-muted" %><br>
+    <%= f.text_field :state, class:"text-field-others" %>
+  </div>
+
+  <div class="field block-two">
+    <%= f.label :name,"PIN CODE:" ,class:"text-muted" %><br>
+    <%= f.number_field :pin_code, class:"text-field-others" %>
+  </div>
+  </div>
+<div class="left-part">
+<%= f.label :name,"AFFILIATED BOARD:", class:"text-muted" %><br/>
+  <div class="field">
+    <%= f.radio_button :affiliated_board, 'CBSE' %><%= f.label :name," CBSE" ,class:"text" %>
+    <%= f.radio_button :affiliated_board, 'ICSE' %><%= f.label :name," ICSE" ,class:"text" %>
+    <%= f.radio_button :affiliated_board, 'MATRIC' %><%= f.label :name," MATRIC" ,class:"text" %> <br/>
+    <%= f.radio_button :affiliated_board, 'STATE BOARD' %><%= f.label :name," STATE BOARD" ,class:"text" %> <br/>
+  </div>
+</div>
+  <div class="actions">
+<!--     <%= f.submit "" %> -->
+   <%= image_submit_tag ("plus.svg"), class:"submit" %>
+  </div>
+<% end %>

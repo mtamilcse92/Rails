@@ -1,0 +1,24 @@
+ 
+ <div class="devise-container">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ <h2 class="h2">ADMINISTRATOR</h2>
+
+  <div class="field">
+    <%= f.label :email, class:"text-muted" %><br />
+    <%= f.email_field :email, autofocus: true, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, class:"text-muted" %><br />
+    <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "SIGN IN",class:"btn btn-success" %>
+  </div>
+
+<% end %>
+
+</div>
+<%= render "devise/shared/links" %>

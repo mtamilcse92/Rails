@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Project', projects_path, method: :post %>
+
+<p>
+  <strong>School name:</strong>
+  <%= @register_school.school_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @register_school.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @register_school.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @register_school.state %>
+</p>
+
+<p>
+  <strong>Pin code:</strong>
+  <%= @register_school.pin_code %>
+</p>
+
+<p>
+  <strong>Affiliated board:</strong>
+  <%= @register_school.affiliated_board %>
+</p>
+
+<%= link_to 'Edit', edit_register_school_path(@register_school) %> |
+<%= link_to 'Back', register_schools_path %>

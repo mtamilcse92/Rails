@@ -1,0 +1,63 @@
+<%= link_to image_tag("plus.svg",class:'a'), new_register_school_path %>
+<p id="notice"><%= notice %></p>
+<div><h1>SCHOOLS</h1></div><hr/>
+
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>School name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Pin code</th>
+      <th>Affiliated board</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @register_schools.each do |register_school| %>
+      <tr>
+        <td><%= register_school.school_name %></td>
+        <td><%= register_school.address %></td>
+        <td><%= register_school.city %></td>
+        <td><%= register_school.state %></td>
+        <td><%= register_school.pin_code %></td>
+        <td><%= register_school.affiliated_board %></td>
+        <td><%= link_to 'Show', register_school %></td>
+        <td><%= link_to 'Edit', edit_register_school_path(register_school) %></td>
+        <td><%= link_to 'Destroy', register_school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ -->
+<br>
+    <% @register_schools.each do |register_school| %>
+    <div class="data">
+<div class="w3-container">
+
+  <div class="w3-card-4" style="width:82%">
+    <header class="w3-container w3-light-grey">
+      <h2><%= register_school.school_name %>
+      <%= link_to 'Destroy', register_school, method: :delete, data: { confirm: 'Are you sure?' }, class:'a-2' %>
+      <%= link_to 'Edit', edit_register_school_path(register_school), class:'a-1' %>
+        
+      </h2>
+    </header>
+    <div class="w3-container">
+      
+      <hr>
+      <div class="details">
+      <img src="../assets/male3.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px"><h2>ADDRESS:<p><%= register_school.address %></p></h2>
+      </div>
+    </div>
+    <button class="w3-btn-block w3-dark-grey">HIDE</button>
+  </div>
+</div>
+</div>
+    <% end %>
+
+
+
